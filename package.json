@@ -1,0 +1,22 @@
+{
+  "name": "ba-training",
+  "version": "1.0.0",
+  "description": "Web system to BA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Juanksyek/BA-training.git"
+  },
+  "author": "Juan Flores, Montse Puerta y Giovanni Hernandez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Juanksyek/BA-training/issues"
+  },
+  "homepage": "https://github.com/Juanksyek/BA-training#readme",
+  "dependencies": {
+    "jquery": "^3.7.0"
+  }
+}
