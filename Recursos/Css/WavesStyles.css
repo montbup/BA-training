@@ -67,15 +67,19 @@ animation: move-wave 3s;
  -webkit-animation-delay: 1s;
  animation-delay: 1s;
 }
+.waveAnimation .topwev{
+	animation: move_wave 10s linear infinite;
+}
 .middlWev {
 	background-size: 50% 120px;
 }
 .waveAnimation .middlWev {
-	animation: move_wave 10s linear infinite;
+	animation: move_wave 15s linear infinite;
 }
 .botomWev {
 	background-size: 50% 100px;
 }
 .waveAnimation .botomWev {
-	animation: move_wave 15s linear infinite;
+	animation: move_wave 20s linear infinite;
 }
+
