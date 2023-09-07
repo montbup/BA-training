@@ -46,9 +46,9 @@
           <div class="login-card">
             <h1>Iniciar Sesion</h1>
             <br />
-            <form>
-              <input type="text" name="user" placeholder="Usuario" />
-              <input type="password" name="pass" placeholder="Contraseña" />
+            <form onsubmit="return validateForm()">
+              <input type="text" name="user" placeholder="Usuario" onkeypress="return onlyAllowNumbers(event)"/>
+              <input type="password" name="pass" placeholder="Contraseña" onkeypress="return allowAlphanumeric(event)"/>
               <input
                 type="submit"
                 name="login"
@@ -64,6 +64,34 @@
         </div>
       </div>
     </div>
+    <script>
+      function validateForm() {
+          // Obtener los valores de los campos
+          var user = document.getElementById("user").value;
+          var pass = document.getElementById("pass").value;
+
+          // Validar el campo de usuario
+          if (user === "") {
+              alert("Por favor, ingrese un nombre de usuario.");
+              return false;
+          } else if (!/^\d{1,10}$/.test(user)) {
+              alert("Usuario no valido, por favor ingrese un usuario valido");
+              return false;
+          }
+
+          // Validar el campo de contraseña
+          if (pass === "") {
+              alert("Por favor, ingrese una contraseña.");
+              return false;
+          } else if (pass.length > 15) {
+              alert("Contraseña no valida, por favor ingrese una contraseña valida");
+              return false;
+          }
+
+          // Si todo está bien, permitir que el formulario se envíe
+          return true;
+      }
+    </script>
 
     <script src="../node_modules/jquery/dist/jquery.min.js	"></script>
     <script src="../Recursos/Code/Index.js"></script>
